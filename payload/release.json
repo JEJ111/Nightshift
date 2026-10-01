@@ -1,0 +1,93 @@
+{
+  "version": "0.5.0",
+  "gameBuild": "25653325",
+  "gameAssemblySha256": "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504",
+  "pluginSha256": "17C3283515D463CCF390F03C9444F921933A0079A7701F603E0FBA10AEED884A",
+  "bepinexZipSha256": "F4CC496BD098A0DF4164B81E3737297707F13A47C2478DBA2F60EEFAB784817A",
+  "nativeBridgeSha256": "333454760457AD7A2E91AC4F472AB3635EBA5D4D1C6C0F55E568B645DEB56D19",
+  "dlssRuntimeSha256": "3975567B8943C53ACCE397F2B72380092F84F162D00B0D2C7D08A1025C563983",
+  "dlssSdkCommit": "374959484e79a640feaba44c93ac8cfb0a03f5b5",
+  "status": "preview",
+  "liveGameValidation": "updated-gameplay-integration-loaded; DLAA GPU evaluations and all FG mode activations confirmed; 14627 generated frames recorded; API and FG status zero",
+  "performanceValidation": "sdk-generated-presents-confirmed-controlled-benchmark-and-physical-pacing-pending",
+  "frameGeneration": true,
+  "normalInstallAllowed": true,
+  "frameGenerationModes": [
+    "Off",
+    "On2x",
+    "On3x",
+    "On4x"
+  ],
+  "streamlineVersion": "2.14.1",
+  "unityPlayerSha256": "8B457114AF608690521AFB6D3770A27AC54197411EFBD184DED833DD38DB2686",
+  "frameGenerationFiles": [
+    {
+      "name": "dxgi.dll",
+      "sha256": "2F1CB3A930312515611A4710B3A9BC6FDAEE1DFFC5A442AFACD18FBADC8CE426"
+    },
+    {
+      "name": "nvngx_dlssg.dll",
+      "sha256": "FF6E90EB78B827927DFF5B4ECC6B1C870C2E9BCA29ED9F48C7D348CC9E170B82"
+    },
+    {
+      "name": "sl.common.dll",
+      "sha256": "82924A8954DD671E09351C5DE0EB87AD0EB25B944CC9F9AB955CA1D9950DE15D"
+    },
+    {
+      "name": "sl.dlss_g.dll",
+      "sha256": "F4A6B2B14DCC0B1485989E430D3B4E3A44AC1800B92BA1AD74F476E64FB2B09C"
+    },
+    {
+      "name": "sl.interposer.dll",
+      "sha256": "8C87C9499461DA561EDD529AA9BF7831D67D7B94EBB1C1A5ED54EF4934E1EA4C"
+    },
+    {
+      "name": "sl.pcl.dll",
+      "sha256": "F13D51CFA05F4CD514DF2026049E2DB8ADF359221713170AD386FD499915B582"
+    },
+    {
+      "name": "sl.reflex.dll",
+      "sha256": "0CE9725E3E03EA9E7F81D008B57F33EE365973D2E349131C8B1C3E3378FE2DB0"
+    }
+  ],
+  "defaultDLAA": true,
+  "defaultFrameGeneration": "Off",
+  "dlssUpscaling": "coming-soon",
+  "controls": {
+    "F11": "Off / 2x / 3x / 4x / Off, skipping unsupported modes",
+    "F5": "DLAA on/off",
+    "F7": "Show/hide menu"
+  },
+  "multiFrameValidation": {
+    "environment": "Exact D3D11/D3D12 presentation bridge, RTX 5070",
+    "2x": {
+      "rendered": 180,
+      "sdkPresented": 356,
+      "generated": 176
+    },
+    "3x": {
+      "rendered": 180,
+      "sdkPresented": 540,
+      "generated": 360
+    },
+    "4x": {
+      "rendered": 180,
+      "sdkPresented": 720,
+      "generated": 540
+    },
+    "apiResult": 0,
+    "fgStatus": 0,
+    "transitionsAndResize": "passed"
+  },
+  "supportedGameBuilds": [
+    {
+      "build": "25603526",
+      "gameAssemblySha256": "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D"
+    },
+    {
+      "build": "25653325",
+      "gameAssemblySha256": "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504"
+    }
+  ],
+  "compatibilityNote": "October 1 Steam build 25653325: unchanged UnityPlayer binary; rebuilt against regenerated IL2CPP bindings; DLAA and 2x/3x/4x hooks active in Meridian Market."
+}
