@@ -1,0 +1,37 @@
+# Build products and local dependencies
+**/bin/
+**/obj/
+**/build/
+/build/
+/dependencies/
+/packages/
+.vs/
+.idea/
+.vscode/
+*.dll
+*.exe
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ilk
+*.res
+*.tlog
+*.zip
+*.7z
+*.nupkg
+
+# Local game state, captures, and credentials
+BepInEx/
+*_Data/
+ngx-cache/
+*.log
+*.mp4
+*.wav
+.env
+.env.*
+*.key
+nightshift-install.json
+render-test-request.json
+Thumbs.db
+Desktop.ini

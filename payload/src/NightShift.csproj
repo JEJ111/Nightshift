@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>NightShift</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BepRoot Condition="'$(BepRoot)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Nivalis Nights\BepInEx</BepRoot>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(BepRoot)\core\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(BepRoot)\core\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(BepRoot)\core\BepInEx.Unity.Common.dll" Private="false" />
+    <Reference Include="$(BepRoot)\core\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(BepRoot)\core\Il2CppInterop.Common.dll" Private="false" />
+    <Reference Include="$(BepRoot)\core\0Harmony.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\UnityEngine.AnimationModule.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\Unity.InputSystem.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\UnityEngine.IMGUIModule.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\UnityEngine.ScreenCaptureModule.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="$(BepRoot)\interop\Unity.Postprocessing.Runtime.dll" Private="false" />
+  </ItemGroup>
+</Project>
