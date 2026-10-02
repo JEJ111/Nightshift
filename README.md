@@ -12,7 +12,7 @@ Already have NightShift 0.5.0 installed? Save and close the game, extract 0.5.1 
 
 | Key | Action |
 | --- | --- |
-| **F11** | Cycle Off â†’ 2Ã— â†’ 3Ã— â†’ 4Ã— â†’ Off, skipping unsupported modes |
+| **F11** | Cycle Off -> 2x -> 3x -> 4x -> Off, skipping unsupported modes |
 | **F5** | Toggle native-resolution DLAA |
 | **F7** | Show or hide the NightShift menu |
 

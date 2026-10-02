@@ -8,7 +8,7 @@
 
 DLAA starts enabled in gameplay. Frame generation starts off each launch. DLSS upscaling is coming soon.
 
-The installer normally finds Steam automatically. If it does not, use Steam â†’ Nivalis Nights â†’ Manage â†’ Browse local files. Drag the game folder onto Install NightShift.exe, or pass its full path to install.ps1 using -GamePath. If access to the game directory is denied, run the installer as administrator.
+The installer normally finds Steam automatically. If it does not, use Steam -> Nivalis Nights -> Manage -> Browse local files. Drag the game folder onto Install NightShift.exe, or pass its full path to install.ps1 using -GamePath. If access to the game directory is denied, run the installer as administrator.
 
 Already have NightShift 0.5.0 installed? Save and close the game, extract 0.5.1 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
 
@@ -20,7 +20,7 @@ Already have NightShift 0.5.0 installed? Save and close the game, extract 0.5.1 
 - Nivalis Nights Steam builds 25680465, 25653325 and 25603526, DirectX 11. Game files are checked by their SHA-256 hashes before installation.
 - An otherwise standard rendering setup. Unknown or modified mod files are preserved and cause the installer to stop rather than overwrite them.
 
-To enable GPU scheduling: Windows Settings â†’ System â†’ Display â†’ Graphics â†’ Default graphics settings. Restart Windows if requested.
+To enable GPU scheduling: Windows Settings -> System -> Display -> Graphics -> Default graphics settings. Restart Windows if requested.
 
 ## Removal and recovery
 
