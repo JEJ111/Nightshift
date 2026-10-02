@@ -9,10 +9,11 @@ using System.Security.Cryptography;
 
 namespace NightShift;
 
-[BepInPlugin(Id, "NightShift", "0.5.0")]
+[BepInPlugin(Id, "NightShift", Version)]
 public sealed class Plugin : BasePlugin
 {
     public const string Id = "local.nivalis.nightshift";
+    public const string Version = "0.5.1";
     internal static Plugin Instance = null!;
     internal ConfigEntry<bool> Optimize = null!;
     internal ConfigEntry<bool> Hud = null!;
@@ -37,7 +38,7 @@ public sealed class Plugin : BasePlugin
         FrameGeneration=Config.Bind("Rendering","FrameGeneration",FrameGenMode.Off,"F11 cycles OFF / 2x / 3x / 4x, skipping unsupported GPU modes. Frame generation starts OFF each launch.");
         FrameGeneration.Value=FrameGenMode.Off;
         DevelopmentControl=Config.Bind("Development","EnableControlFile",false,"Local render validation only: poll a bounded render-test-request.json. Disabled for normal play; captures can stall the GPU.");
-        Log.LogInfo($"NightShift 0.5.0 | Unity {Application.unityVersion} | {SystemInfo.graphicsDeviceName} | {SystemInfo.graphicsDeviceType}");
+        Log.LogInfo($"NightShift {Version} | Unity {Application.unityVersion} | {SystemInfo.graphicsDeviceName} | {SystemInfo.graphicsDeviceType}");
         if (Application.unityVersion != "2020.3.44f1")
         {
             Log.LogError("Unvalidated Unity version. Refusing to patch this build.");
@@ -47,7 +48,7 @@ public sealed class Plugin : BasePlugin
         {
             using var sha = SHA256.Create();
             string hash = Convert.ToHexString(sha.ComputeHash(file));
-            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504")
+            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504" && hash != "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")
             {
                 Log.LogError("Unvalidated game binary. Refusing hooks until this update is checked.");
                 return;

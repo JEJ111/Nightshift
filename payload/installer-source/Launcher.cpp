@@ -31,7 +31,7 @@ static int Finish(int code) {
 
 int wmain(int argc, wchar_t** argv) {
     SetConsoleTitleW(L"NightShift installer");
-    std::wcout << L"NightShift 0.5.0\n"
+    std::wcout << L"NightShift 0.5.1\n"
                   L"Nivalis Nights community mod\n\n";
     if (argc > 2) {
         std::wcout << L"Open this application to install, or drag your Nivalis Nights game folder onto it.\n";
@@ -54,7 +54,7 @@ int wmain(int argc, wchar_t** argv) {
         std::wcout << L"The NightShift package isn't fully extracted.\n\n"
                       L"1. Close this window.\n"
                       L"2. In File Explorer, right-click the downloaded ZIP and choose Extract All.\n"
-                      L"3. Click Extract, then open the extracted NightShift-0.5.0 folder.\n"
+                      L"3. Click Extract, then open the extracted NightShift-0.5.1 folder.\n"
                       L"4. Open Install NightShift.exe there.\n\n"
                       L"Keep the payload and Tools folders beside this application.\n";
         return Finish(1);

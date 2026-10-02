@@ -4,7 +4,7 @@ if not exist "%~dp0..\payload\install.ps1" (
     echo.
     echo NightShift is not fully extracted.
     echo Right-click the downloaded ZIP and choose Extract All.
-    echo Open the extracted NightShift-0.5.0 folder, then Install NightShift.exe.
+    echo Open the extracted NightShift-0.5.1 folder, then Install NightShift.exe.
     echo.
     pause
     exit /b 1

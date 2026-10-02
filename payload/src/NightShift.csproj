@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>NightShift</AssemblyName>
+    <Version>0.5.1</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <BepRoot Condition="'$(BepRoot)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Nivalis Nights\BepInEx</BepRoot>

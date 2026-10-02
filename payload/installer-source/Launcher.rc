@@ -2,8 +2,8 @@
 1 ICON "NightShift.ico"
 1 RT_MANIFEST "launcher.manifest"
 1 VERSIONINFO
- FILEVERSION 0,5,0,2
- PRODUCTVERSION 0,5,0,0
+ FILEVERSION 0,5,1,0
+ PRODUCTVERSION 0,5,1,0
  FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
  FILEFLAGS 0
  FILEOS VOS_NT_WINDOWS32
@@ -15,8 +15,8 @@ BEGIN
   BEGIN
    VALUE "FileDescription", "NightShift installer"
    VALUE "ProductName", "NightShift"
-   VALUE "FileVersion", "0.5.0 installer revision 2"
-   VALUE "ProductVersion", "0.5.0"
+   VALUE "FileVersion", "0.5.1"
+   VALUE "ProductVersion", "0.5.1"
    VALUE "OriginalFilename", "Install NightShift.exe"
   END
  END

@@ -247,7 +247,7 @@ public sealed class Driver : MonoBehaviour
             if (!guiSeen) { guiSeen = true; Plugin.Instance.Log.LogInfo("Overlay OnGUI callback running."); }
             if (!Plugin.Instance.Hud.Value) return;
             float width = Mathf.Min(520, Screen.width - 24);
-            GUI.Box(new Rect(12,12,width,174),"NightShift 0.5.0");
+            GUI.Box(new Rect(12,12,width,174),"NightShift "+Plugin.Version);
             GUI.Label(new Rect(24,38,width-24,22),FrameGenRenderer.MenuStatus);
             GUI.Label(new Rect(24,63,width-24,22),DlssRenderer.MenuStatus);
             GUI.Label(new Rect(24,88,width-24,22),"DLSS upscaling: Coming soon");

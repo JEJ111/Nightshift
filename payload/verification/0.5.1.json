@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "version": "0.5.1",
+  "checkedUtc": "2026-10-02T17:00:01.356272+00:00",
+  "gameBuild": "25680465",
+  "binaries": {
+    "managedSha256": "0DE24C9C61E0D29D3C2F0D13B25AB45E24B8B152194219C59FC160D38AD8871F",
+    "dxgiSha256": "E9130D96A769515ADBD07CB175EA658B0008E74029E5160495A08EB463DEDABB",
+    "dlaaBridgeSha256": "35ABA23396940FE1A944BC262521EFFF68B49087DA270DD40EFC7FA3B04F7F7D",
+    "launcherSha256": "1C4F1F7268E265E3DD1F8EE5245BA387FFA4833BD29E1314B0A2ABCDF8506538"
+  },
+  "installer": {
+    "passed": 32,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "launcher_extraction_guard_and_resources",
+        "passed": true,
+        "details": "ZIP-only launch refused before PowerShell; icon and executable manifest present"
+      },
+      {
+        "check": "fresh_install_via_actual_launcher",
+        "passed": true,
+        "details": {
+          "pluginFiles": 10,
+          "loaderFiles": 228,
+          "gameBuild": "25680465"
+        }
+      },
+      {
+        "check": "repeat_install",
+        "passed": true,
+        "details": "owned 0.5.1 reinstall accepted and content identical"
+      },
+      {
+        "check": "upgrade_from_actual_050_artifact",
+        "passed": true,
+        "details": "actual published 0.5.0-r2 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.1 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_050_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.0 artifact recovery installs guarded 0.5.1 DLL and records current detected game build"
+      },
+      {
+        "check": "uninstall_owned_loader_and_preserve_user_data",
+        "passed": true,
+        "details": "all individually owned unchanged plugin/loader files removed; saves/configuration/caches/captures retained"
+      },
+      {
+        "check": "foreign_plugin_uninstall_preserves_loader",
+        "passed": true,
+        "details": "NightShift plugin removed; other plugin and owned loader preserved with explanation"
+      },
+      {
+        "check": "compatible_foreign_loader_reuse_and_uninstall_preservation",
+        "passed": true,
+        "details": "existing compatible BepInEx loader reused without claiming ownership; uninstall preserves every pre-existing loader file"
+      },
+      {
+        "check": "changed_managed_plugin_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_loader_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_dxgi_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "foreign_plugin_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_loader_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_dxgi_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "unknown_unityplayer_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "payload_checksum_mismatch_refusal",
+        "passed": true,
+        "details": "mismatched packaged managed DLL refused before installed writes"
+      },
+      {
+        "check": "recovery_hashes_owned_removal_repeat_and_reinstall",
+        "passed": true,
+        "details": "matching guarded 0.5.1 DLL installed; owned FG files removed; repeat no-op; full 0.5.1 reinstall restores FG files"
+      },
+      {
+        "check": "recovery_changed_owned_file_refusal",
+        "passed": true,
+        "details": "changed owned proxy detected before any recovery change"
+      },
+      {
+        "check": "recovery_unowned_managed_plugin_refusal",
+        "passed": true,
+        "details": "unowned managed plugin preserved"
+      },
+      {
+        "check": "recovery_duplicate_managed_ownership_refusal",
+        "passed": true,
+        "details": "duplicate ownership entry refused before writes"
+      },
+      {
+        "check": "uninstall_manifest_path_containment",
+        "passed": true,
+        "details": "manifest traversal rejected and external file untouched"
+      },
+      {
+        "check": "recovery_unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "recovery unsupported game refused before writes"
+      },
+      {
+        "check": "idempotent_recovery_game_guard",
+        "passed": true,
+        "details": "repeated recovery revalidates current game identity and rejects unsupported binary"
+      },
+      {
+        "check": "idempotent_recovery_changed_installed_plugin_guard",
+        "passed": true,
+        "details": "repeated recovery checks installed managed ownership digest and preserves changed DLL"
+      },
+      {
+        "check": "recovery_payload_checksum_guard_initial_and_idempotent",
+        "passed": true,
+        "details": "corrupt recovery payload refused for both initial and repeated recovery"
+      },
+      {
+        "check": "install_nested_junction_path_containment",
+        "passed": true,
+        "details": "nested junction traversal refused and external fixture untouched"
+      },
+      {
+        "check": "uninstall_nested_junction_path_containment",
+        "passed": true,
+        "details": "uninstall refused nested junction before deleting any external managed plugin"
+      },
+      {
+        "check": "recovery_nested_junction_path_containment",
+        "passed": true,
+        "details": "recovery refused nested junction before overwriting any external managed plugin"
+      },
+      {
+        "check": "running_target_guard_actual_process",
+        "passed": true,
+        "details": "real harmless Nivalis Nights process blocks its exact target path for install/recovery; separate fixture installation passes while it remains running; no Get-Process mocks"
+      },
+      {
+        "check": "shipped_recovery_uninstall_cmd_wrappers",
+        "passed": true,
+        "details": "shipping recovery/uninstall .cmd wrappers accept relocated folder with spaces and propagate successful operations"
+      }
+    ],
+    "scope": "Real shipped scripts in isolated fixtures, including upgrade from the published 0.5.0-r2 artifact. No game-process mocks."
+  },
+  "interfaces": {
+    "coverage": {
+      "typeCount": 912,
+      "assemblyCount": 8,
+      "hookCount": 11,
+      "stableMemberReferenceCount": 177,
+      "topLevelReferencedTypes": 55,
+      "resolvedStableApiReferences": 177
+    },
+    "checks": {
+      "exactHookSignaturesUnchanged": true,
+      "exactHookLookupUnambiguous": true,
+      "referencedTopLevelLayoutsUnchanged": true,
+      "referencedTopLevelMethodsAndPropertiesRemoved": 0,
+      "allShippedStableApiReferencesResolve": true,
+      "postprocessAndPlayerLoopFieldOffsetsResolvedAtRuntime": true,
+      "gameSingletonFieldUsesRuntimeStaticFieldAccess": true,
+      "gameSceneStatePropertiesUseRuntimeMethodInvocation": true,
+      "gameAssemblyRvaOrOffsetAssumptionsFound": false,
+      "nativeHookSlotsMatchLocalMicrosoftSdk": true,
+      "managedDlssPacketExpectedSize": 96,
+      "managedFrameGenPacketExpectedSize": 392,
+      "managedFrameGenStatusExpectedSize": 80
+    },
+    "rendererImplementationEqualsStableBase": true
+  },
+  "native": {
+    "checks": [
+      {
+        "probe": "ngx",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "probe": "proxy",
+        "exitCode": 0,
+        "passed": true
+      }
+    ],
+    "scope": "NGX evaluate/output readback, dimensions, repeated init/shutdown, state restoration; exact DXGI proxy ordinary presentation, resize and release. Explicit standalone probe mode; gameplay FG modes are checked separately."
+  },
+  "gameplay": {
+    "environment": "RTX 5070, 2560x1440, Meridian Market",
+    "playerResult": "Player approved appearance and operation and authorized website publication.",
+    "preCardFix": "2x, 3x, 4x and Off selected in gameplay; same final native renderer. The later managed change corrected only the displayed version.",
+    "finalBuild": "Final managed DLL loaded with all hooks ready; corrected 0.5.1 card observed. Fresh final runtime showed active DLAA and 2x generation with API/FG status zero.",
+    "readonlyObservation": {
+      "pid": 2768,
+      "utc": "2026-10-02T16:58:27.5795761Z",
+      "scene": "2_Meridian_Market",
+      "resolution": "2560x1440",
+      "characters": 256,
+      "dlss": {
+        "requested": "DLAA",
+        "active": true,
+        "inputResolution": "2560x1440",
+        "successfulNativeEvaluations": 10850,
+        "status": "DLSS DLAA GPU evaluated | 2560x1440 -> 2560x1440 | visual validation pending",
+        "note": "Super Resolution/DLAA experimental integration; no frame generation. Runtime success does not establish correct moving-object motion vectors, UI separation or visual parity."
+      },
+      "frameGeneration": {
+        "requested": "Off",
+        "available": true,
+        "active": false,
+        "apiResult": 0,
+        "fgStatus": 0,
+        "renderedFrames": 15303,
+        "sdkPresentedFrames": 15303,
+        "generatedFrames": 0,
+        "submittedFrames": 0,
+        "renderedFps": 43.992921538924385,
+        "sdkPresentedFps": 43.992921538924385,
+        "beginCallbacks": 15307,
+        "endCallbacks": 15306,
+        "lastBeginFrame": 15307,
+        "lastEndFrame": 15306,
+        "input": "2560x1440",
+        "output": "2560x1440",
+        "lastCameraFrame": -1,
+        "nativeMessage": "Frame generation OFF requested",
+        "note": "SDK presents include generated frames; physical display pacing and moving-object/UI quality need player validation."
+      }
+    },
+    "scope": "Integration and player smoke check; no controlled FPS benchmark or fresh final all-mode recording."
+  },
+  "limitations": [
+    "Broader hardware, long sessions, scene transitions, moving-object/UI quality and physical display pacing remain under review.",
+    "Normal user exit recorded a UnityPlayer.dll shutdown fault matching 18 earlier events since September 30. Root cause remains unproven; this release does not claim to fix it."
+  ]
+}
