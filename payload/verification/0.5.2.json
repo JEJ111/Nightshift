@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "version": "0.5.2",
+  "checkedUtc": "2026-10-05T23:43:53.218805+00:00",
+  "gameBuild": "25738165",
+  "gameHashes": {
+    "GameAssembly.dll": "6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3",
+    "UnityPlayer.dll": "8B457114AF608690521AFB6D3770A27AC54197411EFBD184DED833DD38DB2686",
+    "Nivalis Nights_Data/il2cpp_data/Metadata/global-metadata.dat": "569EDD543D0975AAAADBD5B4DE9C460884B502BD68E30DA1D7C0F7A839E718BD"
+  },
+  "binaries": {
+    "managedSha256": "F2F0AD0F6BE24C704832798DE724C789AC9971F4A447C1444573AB03360EED7B",
+    "dxgiSha256": "6A998E1716034E5FA02CD8CAA2D8B51695E1CEC4B6886DFD1E1F6465E2997C07",
+    "dlaaBridgeSha256": "55FD23876B70551A892605BDB537C87C11A3C88DF7E3F21FC005FF5F77AB05DF",
+    "launcherSha256": "7FAE72D9DAD5DE56AEFD572D7DD35FB50A491C48D2782E430FC12124B10B89D3"
+  },
+  "interfaces": {
+    "coverage": {
+      "typeCount": 903,
+      "assemblyCount": 8,
+      "hookCount": 11,
+      "stableMemberReferenceCount": 177
+    },
+    "referencedTopLevelTypes": 55,
+    "allUsedApiReferencesResolve": true,
+    "exactHookSignaturesUnchanged": true,
+    "hookLookupUnambiguous": true,
+    "referencedTopLevelLayoutsUnchanged": true,
+    "referencedTopLevelPublicMethodsAndPropertiesRemoved": 0,
+    "fieldOffsetsResolvedThroughRuntimeApis": true,
+    "unityPlayerUnchanged": true,
+    "rendererImplementationEqualsPublished051": true
+  },
+  "installer": {
+    "passed": 34,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "launcher_extraction_guard_and_resources",
+        "passed": true,
+        "details": "ZIP-only launch refused before PowerShell; icon and executable manifest present"
+      },
+      {
+        "check": "fresh_install_via_actual_launcher",
+        "passed": true,
+        "details": {
+          "pluginFiles": 10,
+          "loaderFiles": 228,
+          "gameBuild": "25738165"
+        }
+      },
+      {
+        "check": "repeat_install",
+        "passed": true,
+        "details": "owned 0.5.2 reinstall accepted and content identical"
+      },
+      {
+        "check": "upgrade_from_actual_050_artifact",
+        "passed": true,
+        "details": "actual published 0.5.0-r2 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.2 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_050_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.0 artifact recovery installs guarded 0.5.2 DLL and records current detected game build"
+      },
+      {
+        "check": "upgrade_from_actual_051_artifact",
+        "passed": true,
+        "details": "actual published 0.5.1 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.2 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_051_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.1 artifact recovery installs guarded 0.5.2 DLL and records current detected game build"
+      },
+      {
+        "check": "uninstall_owned_loader_and_preserve_user_data",
+        "passed": true,
+        "details": "all individually owned unchanged plugin/loader files removed; saves/configuration/caches/captures retained"
+      },
+      {
+        "check": "foreign_plugin_uninstall_preserves_loader",
+        "passed": true,
+        "details": "NightShift plugin removed; other plugin and owned loader preserved with explanation"
+      },
+      {
+        "check": "compatible_foreign_loader_reuse_and_uninstall_preservation",
+        "passed": true,
+        "details": "existing compatible BepInEx loader reused without claiming ownership; uninstall preserves every pre-existing loader file"
+      },
+      {
+        "check": "changed_managed_plugin_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_loader_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_dxgi_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "foreign_plugin_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_loader_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_dxgi_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "unknown_unityplayer_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "payload_checksum_mismatch_refusal",
+        "passed": true,
+        "details": "mismatched packaged managed DLL refused before installed writes"
+      },
+      {
+        "check": "recovery_hashes_owned_removal_repeat_and_reinstall",
+        "passed": true,
+        "details": "matching guarded 0.5.2 DLL installed; owned FG files removed; repeat no-op; full 0.5.2 reinstall restores FG files"
+      },
+      {
+        "check": "recovery_changed_owned_file_refusal",
+        "passed": true,
+        "details": "changed owned proxy detected before any recovery change"
+      },
+      {
+        "check": "recovery_unowned_managed_plugin_refusal",
+        "passed": true,
+        "details": "unowned managed plugin preserved"
+      },
+      {
+        "check": "recovery_duplicate_managed_ownership_refusal",
+        "passed": true,
+        "details": "duplicate ownership entry refused before writes"
+      },
+      {
+        "check": "uninstall_manifest_path_containment",
+        "passed": true,
+        "details": "manifest traversal rejected and external file untouched"
+      },
+      {
+        "check": "recovery_unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "recovery unsupported game refused before writes"
+      },
+      {
+        "check": "idempotent_recovery_game_guard",
+        "passed": true,
+        "details": "repeated recovery revalidates current game identity and rejects unsupported binary"
+      },
+      {
+        "check": "idempotent_recovery_changed_installed_plugin_guard",
+        "passed": true,
+        "details": "repeated recovery checks installed managed ownership digest and preserves changed DLL"
+      },
+      {
+        "check": "recovery_payload_checksum_guard_initial_and_idempotent",
+        "passed": true,
+        "details": "corrupt recovery payload refused for both initial and repeated recovery"
+      },
+      {
+        "check": "install_nested_junction_path_containment",
+        "passed": true,
+        "details": "nested junction traversal refused and external fixture untouched"
+      },
+      {
+        "check": "uninstall_nested_junction_path_containment",
+        "passed": true,
+        "details": "uninstall refused nested junction before deleting any external managed plugin"
+      },
+      {
+        "check": "recovery_nested_junction_path_containment",
+        "passed": true,
+        "details": "recovery refused nested junction before overwriting any external managed plugin"
+      },
+      {
+        "check": "running_target_guard_actual_process",
+        "passed": true,
+        "details": "real harmless Nivalis Nights process blocks its exact target path for install/recovery; separate fixture installation passes while it remains running; no Get-Process mocks"
+      },
+      {
+        "check": "shipped_recovery_uninstall_cmd_wrappers",
+        "passed": true,
+        "details": "shipping recovery/uninstall .cmd wrappers accept relocated folder with spaces and propagate successful operations"
+      },
+      {
+        "check": "original_game_and_shipped_scripts_preserved",
+        "passed": true,
+        "details": {
+          "installedGameIdentityHashes": {
+            "Nivalis Nights.exe": "C166FB8A4A61168878CDAA78E62B95E1DBD5432BE9C0C940C4BD598B20D95C7A",
+            "GameAssembly.dll": "6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3",
+            "UnityPlayer.dll": "8B457114AF608690521AFB6D3770A27AC54197411EFBD184DED833DD38DB2686"
+          },
+          "shippedScriptHashes": {
+            "install.ps1": "DD3CAAB3600429894172500B2DEC2B6311D1FC8D6043D9E833C75074FFDF934A",
+            "Rollback-FG.ps1": "370BE468130BAFEC751D4EBB3C9363F695AC059AEE7331C09F191999BEFCCC3D"
+          },
+          "fixtureGameFiles": "hardlinks used only for read-only identity checks; corruption cases unlink before writing"
+        }
+      }
+    ],
+    "scope": "Real shipped scripts and launcher in isolated fixtures; actual published 0.5.0-r2 and 0.5.1 upgrades/recoveries. No game-process mocks."
+  },
+  "native": {
+    "checks": [
+      {
+        "probe": "ngx",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "probe": "proxy",
+        "exitCode": 0,
+        "passed": true
+      }
+    ],
+    "scope": "NGX evaluate/output readback, dimensions, repeated init/shutdown, state restoration; exact DXGI proxy ordinary presentation, resize and release. Explicit standalone probe mode; gameplay FG modes are checked separately."
+  },
+  "gameplay": {
+    "checkedAt": "2026-10-05T23:43:05.423679+00:00",
+    "version": "0.5.2",
+    "gameBuild": "25738165",
+    "playerReport": "looks great",
+    "playerRequestedPublication": true,
+    "playerPerformanceObservation": "Without frame generation, player reported approximately 60-70 FPS in front of their shop after the game update; previously lower in their video. Uncontrolled observation, not a NightShift 0.5.2 benchmark.",
+    "modesObservedInFreshGameplayLog": [
+      "On2x",
+      "On3x",
+      "On4x",
+      "Off"
+    ],
+    "dlaaGpuEvaluationObserved": true,
+    "startupAndHooksPassed": true,
+    "renderingImplementationUnchangedFrom051": true,
+    "scope": "Player visual and mode-switch smoke check plus fresh startup/render logs; no controlled FPS or physical presentation benchmark.",
+    "evidence": [
+      "final-startup-and-modes.log",
+      "Player.log"
+    ]
+  },
+  "limitations": [
+    "Player smoke check on RTX 5070, 2560x1440; no controlled FPS or physical presentation benchmark.",
+    "The reported 60-70 FPS after the game patch is an uncontrolled player observation, not a measured NightShift gain.",
+    "Broader hardware, long sessions, scene transitions and moving-object/UI quality remain under review.",
+    "The previously observed Unity shutdown fault is not claimed fixed by this release."
+  ]
+}

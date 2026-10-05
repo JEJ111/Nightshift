@@ -13,7 +13,7 @@ namespace NightShift;
 public sealed class Plugin : BasePlugin
 {
     public const string Id = "local.nivalis.nightshift";
-    public const string Version = "0.5.1";
+    public const string Version = "0.5.2";
     internal static Plugin Instance = null!;
     internal ConfigEntry<bool> Optimize = null!;
     internal ConfigEntry<bool> Hud = null!;
@@ -48,7 +48,7 @@ public sealed class Plugin : BasePlugin
         {
             using var sha = SHA256.Create();
             string hash = Convert.ToHexString(sha.ComputeHash(file));
-            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504" && hash != "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")
+            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504" && hash != "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D" && hash != "6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3")
             {
                 Log.LogError("Unvalidated game binary. Refusing hooks until this update is checked.");
                 return;

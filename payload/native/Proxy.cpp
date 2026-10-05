@@ -55,7 +55,7 @@ static bool SupportedBinary() {
     unsigned char digest[32]={}; if(ok) ok=BCryptFinishHash(hash,digest,32,0)>=0;
     if(hash) BCryptDestroyHash(hash); if(algorithm) BCryptCloseAlgorithmProvider(algorithm,0); CloseHandle(file);
     char value[65]={}; for(int i=0;i<32;i++) std::sprintf(value+i*2,"%02X",digest[i]);
-    return ok && (std::strcmp(value,"9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D")==0 || std::strcmp(value,"D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504")==0 || std::strcmp(value,"0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")==0);
+    return ok && (std::strcmp(value,"9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D")==0 || std::strcmp(value,"D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504")==0 || std::strcmp(value,"0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")==0 || std::strcmp(value,"6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3")==0);
 }
 static bool Bootstrap() {
     if(insideBootstrap || !IsTarget()) return false;

@@ -35,7 +35,7 @@ function Hash([string]$path) { (Get-FileHash -LiteralPath $path -Algorithm SHA25
 $manifestPath=Contained 'nightshift-install.json'
 if(-not(Test-Path -LiteralPath $manifestPath)) { throw 'Ownership manifest missing. No files changed.' }
 $manifest=Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-if($manifest.version -notin @('0.4.0','0.5.0','0.5.1')) { throw 'This recovery supports NightShift 0.4.0, 0.5.0 and 0.5.1 only.' }
+if($manifest.version -notin @('0.4.0','0.5.0','0.5.1','0.5.2')) { throw 'This recovery supports NightShift 0.4.0, 0.5.0, 0.5.1 and 0.5.2 only.' }
 $previousPlugin=Join-Path $PSScriptRoot 'rollback\NightShift.dll'
 $release=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'release.json') -Raw | ConvertFrom-Json
 $currentGameHash=Hash (Contained 'GameAssembly.dll')
@@ -52,9 +52,9 @@ foreach($entry in $replace) {
     $target=Contained $entry.path
     if((Test-Path -LiteralPath $target) -and (Hash $target) -ne $entry.hash) { throw "Changed owned file preserved; rollback stopped before making changes: $target" }
 }
-if($manifest.version -eq '0.5.1' -and $manifest.recoveryMode -eq 'DLAAOnly') {
+if($manifest.version -eq '0.5.2' -and $manifest.recoveryMode -eq 'DLAAOnly') {
     if($manifest.gameBuild -ne $detectedGameBuild) { $manifest.gameBuild=$detectedGameBuild; $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath -Encoding UTF8 }
-    Write-Host 'NightShift 0.5.1 DLAA-only recovery is already installed.'; return
+    Write-Host 'NightShift 0.5.2 DLAA-only recovery is already installed.'; return
 }
 $oldManifest=[IO.File]::ReadAllBytes($manifestPath)
 $backups=@{}
@@ -64,9 +64,9 @@ try {
     foreach($entry in $replace | Where-Object path -in $fgPaths) { $target=Contained $entry.path; if(Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target } }
     $remaining=@($manifest.pluginFiles | Where-Object path -notin $fgPaths)
     foreach($entry in $remaining | Where-Object path -eq $pluginRelative) { $entry.hash=$previousHash }
-    $restored=[pscustomobject]@{version='0.5.1';gameBuild=$detectedGameBuild;recoveryMode='DLAAOnly';pluginFiles=$remaining;loaderFiles=@($manifest.loaderFiles)}
+    $restored=[pscustomobject]@{version='0.5.2';gameBuild=$detectedGameBuild;recoveryMode='DLAAOnly';pluginFiles=$remaining;loaderFiles=@($manifest.loaderFiles)}
     $restored | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
-    Write-Host 'NightShift 0.5.1 DLAA-only recovery installed. The owned frame-generation proxy/runtime files were removed. Existing loader, logs, captures, configuration and saves were preserved.'
+    Write-Host 'NightShift 0.5.2 DLAA-only recovery installed. The owned frame-generation proxy/runtime files were removed. Existing loader, logs, captures, configuration and saves were preserved.'
 } catch {
     foreach($target in $backups.Keys) { [IO.File]::WriteAllBytes($target,$backups[$target]) }
     [IO.File]::WriteAllBytes($manifestPath,$oldManifest)
