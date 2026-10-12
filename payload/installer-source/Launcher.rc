@@ -15,8 +15,8 @@ BEGIN
   BEGIN
    VALUE "FileDescription", "NightShift installer"
    VALUE "ProductName", "NightShift"
-   VALUE "FileVersion", "0.5.2"
-   VALUE "ProductVersion", "0.5.2"
+   VALUE "FileVersion", "0.5.3"
+   VALUE "ProductVersion", "0.5.3"
    VALUE "OriginalFilename", "Install NightShift.exe"
   END
  END

@@ -1,4 +1,4 @@
-# NightShift 0.5.2
+# NightShift 0.5.3
 
 A community preview mod adding NVIDIA frame generation and native-resolution DLAA to Nivalis Nights.
 
@@ -14,7 +14,7 @@ Save and close the game, extract the entire ZIP, then double-click **Install Nig
 
 DLAA starts enabled for gameplay. Frame generation starts off each launch. Hiding the menu preserves the selected modes. DLSS upscaling is **coming soon**; Quality, Balanced and Performance are not selectable in this release.
 
-Already have NightShift 0.5.0 or 0.5.1 installed? Save and close the game, extract 0.5.2 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
+Already have NightShift 0.5.0, 0.5.1 or 0.5.2 installed? Save and close the game, extract 0.5.3 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
 
 ## Hardware and game compatibility
 
@@ -22,21 +22,25 @@ DLAA requires NVIDIA GeForce RTX hardware. NVIDIA frame generation requires comp
 
 The game continues rendering through **DirectX 11**. A game-local DXGI bridge presents frames through an independent D3D12 device on the same adapter.
 
-This preview targets Steam builds **25738165**, **25680465**, **25653325** and **25603526**, Unity **2020.3.44f1**. Installation and native bootstrap check the game binaries. A changed game build stops installation or disables the hooks until reviewed.
+This preview targets Steam builds **25828494**, **25738165**, **25680465**, **25653325** and **25603526**, Unity **2020.3.44f1**. Installation and native bootstrap check the game binaries. A changed game build stops installation or disables the hooks until reviewed.
 
 ## Validation
 
-October 5 public build 25738165 was reviewed against freshly regenerated IL2CPP bindings: all 177 used API references and all 11 hook signatures passed. UnityPlayer and the renderer implementation are unchanged. The player confirmed the image looks great; fresh final-build logs show DLAA GPU evaluation and 2x, 3x, 4x and Off selected in gameplay.
+October 12 compatibility release for public Steam build 25828494. Regenerated IL2CPP review resolved all 177 used API references and confirmed all 11 hook signatures. UnityPlayer and renderer implementation are unchanged; removed Singleton profiler helpers are unused by NightShift.
 
-All 34 installer/preservation checks passed, including upgrade and recovery from the actual published 0.5.1 and 0.5.0-r2 artifacts. The final native bridges passed standalone NGX and DXGI probes. Existing configuration, saves, captures and generated caches are preserved by the installer.
+The player confirmed that all modes work and look correct. Fresh 0.5.3 logs show successful hook startup, DLAA GPU evaluation and 2x, 3x, 4x and Off selected in gameplay on RTX 5070 at 2560x1440.
 
-See STATUS.md and verification/0.5.2.json for current evidence and limitations. This is a player smoke check, not a controlled FPS or physical-display pacing benchmark. The previously observed Unity shutdown fault is not claimed fixed.
+All 36 installer/preservation checks passed, including upgrades and recovery from the actual published 0.5.0-r2, 0.5.1 and 0.5.2 artifacts. Native NGX and DXGI probes passed. Existing configuration, saves, settings, other mod files and caches were preserved during the actual upgrade.
+
+This is a player smoke check, not a controlled FPS or physical-display pacing benchmark. Broader hardware, long sessions, scene transitions and moving-object/UI quality remain under review. The previously observed Unity shutdown fault is not claimed fixed.
+
+See STATUS.md and verification/0.5.3.json for current evidence.
 
 ## Removal and recovery
 
 Close the game, then run **Tools/Uninstall NightShift.cmd**. Only unchanged files owned by this installer are removed. An owned loader is retained if other plugins need it.
 
-**Tools/Restore Working DLSS.cmd** restores the matching 0.5.2 DLAA-only plugin, preserving its native DLSS bridge and removing the owned frame-generation files. Unknown or changed files stop rollback before changes.
+**Tools/Restore Working DLSS.cmd** restores the matching 0.5.3 DLAA-only plugin, preserving its native DLSS bridge and removing the owned frame-generation files. Unknown or changed files stop rollback before changes.
 
 ## Source
 
