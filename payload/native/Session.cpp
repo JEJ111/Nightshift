@@ -68,7 +68,7 @@ bool FGSession::Initialize() {
     sl::Preferences preferences;
     preferences.pathsToPlugins=paths; preferences.numPathsToPlugins=1; preferences.pathToLogsAndData=logs.c_str();
     preferences.featuresToLoad=features; preferences.numFeaturesToLoad=3; preferences.logMessageCallback=&SLLog;
-    preferences.engine=sl::EngineType::eUnity; preferences.engineVersion="2020.3.44f1";
+    preferences.engine=sl::EngineType::eUnity; preferences.engineVersion="2020.3";
     preferences.projectId="19f82428-6481-48c5-b47c-e2df3df2dc92";
     preferences.flags=sl::PreferenceFlags::eUseManualHooking|sl::PreferenceFlags::eDisableCLStateTracking|sl::PreferenceFlags::eUseFrameBasedResourceTagging;
     auto result=init(preferences,sl::kSDKVersion);

@@ -72,8 +72,10 @@ if ($Uninstall) {
 $currentGameHash=File-Hash (Resolve-Contained 'GameAssembly.dll')
 $releaseManifest = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'release.json') -Raw | ConvertFrom-Json
 $supportedBuild = @($releaseManifest.supportedGameBuilds | Where-Object { $_.gameAssemblySha256 -eq $currentGameHash })
-if ($supportedBuild.Count -ne 1) { throw 'This preview supports Steam builds 25603526, 25653325, 25680465, 25738165 and 25828494. The game binary has changed; revalidate before installing.' }
+if ($supportedBuild.Count -ne 1) { throw 'This preview supports Steam builds 25603526, 25653325, 25680465, 25738165, 25828494 and 25959175. The game binary has changed; revalidate before installing.' }
 $detectedGameBuild=$supportedBuild[0].build
+$expectedUnityHash=$supportedBuild[0].unityPlayerSha256
+if(-not $expectedUnityHash) { $expectedUnityHash=$releaseManifest.unityPlayerSha256 }
 $conflict = @(Get-ChildItem -LiteralPath (Resolve-Contained 'BepInEx\plugins') -Filter '*Lumen*.dll' -Recurse -File -ErrorAction SilentlyContinue)
 if ($conflict.Count -gt 0) { throw 'Lumen already installed. Use one renderer optimizer at a time.' }
 $sourcePlugin = Join-Path $PSScriptRoot 'NightShift.dll'
@@ -86,7 +88,7 @@ foreach ($file in $releaseManifest.frameGenerationFiles) {
     $relative = if ($file.name -eq 'dxgi.dll') { 'dxgi.dll' } else { 'BepInEx\NightShift\framegen\runtime\' + $file.name }
     $plannedPlugins += [pscustomobject]@{source=(Join-Path $PSScriptRoot ('framegen-runtime\' + $file.name));path=$relative;hash=$file.sha256}
 }
-if ((File-Hash (Resolve-Contained 'UnityPlayer.dll')) -ne $releaseManifest.unityPlayerSha256) { throw 'Unity renderer binary changed. Revalidate the presentation bridge before installing.' }
+if ((File-Hash (Resolve-Contained 'UnityPlayer.dll')) -ne $expectedUnityHash) { throw 'Unity renderer binary changed. Revalidate the presentation bridge before installing.' }
 $pluginBackups = @{}
 $previousManifest = $null
 if (Test-Path -LiteralPath $manifestPath) { $previousManifest = [IO.File]::ReadAllBytes($manifestPath) }
@@ -140,7 +142,7 @@ try {
     }
     $manifest = [pscustomobject]@{version=$releaseManifest.version;gameBuild=$detectedGameBuild;pluginFiles=$pluginFiles;loaderFiles=$loaderFiles}
     $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
-    Write-Host 'NightShift 0.5.3 installed. F11: frame generation Off/2x/3x/4x. F5: DLAA on/off. F7: show/hide menu.'
+    Write-Host 'NightShift 0.5.4 installed. F11: frame generation Off/2x/3x/4x. F5: DLAA on/off. F7: show/hide menu.'
     Write-Host 'DLAA starts ON in gameplay; frame generation starts OFF. Launch normally through Steam. DLSS upscaling is coming soon.'
 } catch {
     # Roll back explicit owned updates as well as newly copied files.

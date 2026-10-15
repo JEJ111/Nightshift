@@ -1,0 +1,693 @@
+{
+  "schemaVersion": 1,
+  "version": "0.5.4",
+  "checkedUtc": "2026-10-15T21:20:10.259404+00:00",
+  "gameBuild": "25959175",
+  "gameHashes": {
+    "Nivalis Nights.exe": "B2B0921F504A5107F4254A6D73E3C7A83D334AB5B2FE9CFCCE5F64653EA8FC45",
+    "GameAssembly.dll": "BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68",
+    "UnityPlayer.dll": "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6",
+    "Nivalis Nights_Data/il2cpp_data/Metadata/global-metadata.dat": "675C48F288CF6E59E91B62179252D23F6E07E4A4680D646193B8DFD8AB160D6A"
+  },
+  "binaries": {
+    "managedSha256": "00FC9CC2BE74026780EC4C6D956100B966A6D16A4F7A6CCD021A50E29396F565",
+    "dxgiSha256": "A23E705D52E27A52383429C46B5C3334764A9AE099DB74D1FF412E396DC2F7D9",
+    "dlaaBridgeSha256": "859D01C2F8E156CDF0D0960A0542DC4BD98FE726616C86A9851CC7610833E891",
+    "launcherSha256": "1D60EFDEEFD32168C243F12DC38F07FFF72FBE5F96C4DF7D45121AA59634AE17",
+    "gameBuild": "25959175",
+    "gameplayValidated": true
+  },
+  "interfaces": {
+    "checkedAt": "2026-10-15T21:11:26.727728+00:00",
+    "gameBuild": "25959175",
+    "artifactReviewed": "0.5.3",
+    "coverage": {
+      "typeCount": 909,
+      "assemblyCount": 8,
+      "hookCount": 11,
+      "stableMemberReferenceCount": 177
+    },
+    "allUsedApiReferencesResolve": true,
+    "exactHookSignaturesUnchanged": true,
+    "referencedTopLevelLayoutsUnchanged": true,
+    "fieldAccess": [
+      {
+        "type": "Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer",
+        "member": "m_Camera",
+        "propertyFound": true,
+        "getter": "UnityEngine.Camera UnityEngine.Rendering.PostProcessing.PostProcessLayer::get_m_Camera()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.Rendering.PostProcessing.PostProcessLayer::NativeFieldInfoPtr_m_Camera"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)",
+          "!!0 Il2CppInterop.Runtime.Runtime.Il2CppObjectPool::Get<UnityEngine.Camera>(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer",
+        "member": "antialiasingMode",
+        "propertyFound": true,
+        "getter": "UnityEngine.Rendering.PostProcessing.PostProcessLayer/Antialiasing UnityEngine.Rendering.PostProcessing.PostProcessLayer::get_antialiasingMode()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.Rendering.PostProcessing.PostProcessLayer::NativeFieldInfoPtr_antialiasingMode"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer",
+        "member": "finalBlitToCameraTarget",
+        "propertyFound": true,
+        "getter": "System.Boolean UnityEngine.Rendering.PostProcessing.PostProcessLayer::get_finalBlitToCameraTarget()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.Rendering.PostProcessing.PostProcessLayer::NativeFieldInfoPtr_finalBlitToCameraTarget"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer",
+        "member": "temporalAntialiasing",
+        "propertyFound": true,
+        "getter": "UnityEngine.Rendering.PostProcessing.TemporalAntialiasing UnityEngine.Rendering.PostProcessing.PostProcessLayer::get_temporalAntialiasing()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.Rendering.PostProcessing.PostProcessLayer::NativeFieldInfoPtr_temporalAntialiasing"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)",
+          "!!0 Il2CppInterop.Runtime.Runtime.Il2CppObjectPool::Get<UnityEngine.Rendering.PostProcessing.TemporalAntialiasing>(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.Singleton`1",
+        "member": "_instance",
+        "propertyFound": true,
+        "getter": "T Nivalis.Singleton`1::get__instance()",
+        "nativeFieldPointers": [
+          "System.IntPtr Nivalis.Singleton`1<T>::NativeFieldInfoPtr__instance"
+        ],
+        "offsetsResolvedAtRuntime": false,
+        "staticFieldAccess": true,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.Void Il2CppInterop.Runtime.IL2CPP::il2cpp_field_static_get_value(System.IntPtr,System.Void*)",
+          "!!0 Il2CppInterop.Runtime.IL2CPP::PointerToValueGeneric<T>(System.IntPtr,System.Boolean,System.Boolean)"
+        ]
+      },
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.GameSceneManager",
+        "member": "IsGame",
+        "propertyFound": true,
+        "getter": "System.Boolean Nivalis.GameSceneManager::get_IsGame()",
+        "nativeFieldPointers": [],
+        "offsetsResolvedAtRuntime": false,
+        "staticFieldAccess": false,
+        "runtimeInvoke": true,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_runtime_invoke(System.IntPtr,System.IntPtr,System.Void**,System.IntPtr&)",
+          "System.Void Il2CppInterop.Runtime.Il2CppException::RaiseExceptionIfNecessary(System.IntPtr)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_object_unbox(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.GameSceneManager",
+        "member": "IsGameplayInitialized",
+        "propertyFound": true,
+        "getter": "System.Boolean Nivalis.GameSceneManager::get_IsGameplayInitialized()",
+        "nativeFieldPointers": [],
+        "offsetsResolvedAtRuntime": false,
+        "staticFieldAccess": false,
+        "runtimeInvoke": true,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_runtime_invoke(System.IntPtr,System.IntPtr,System.Void**,System.IntPtr&)",
+          "System.Void Il2CppInterop.Runtime.Il2CppException::RaiseExceptionIfNecessary(System.IntPtr)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_object_unbox(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.GameSceneManager",
+        "member": "IsLoading",
+        "propertyFound": true,
+        "getter": "System.Boolean Nivalis.GameSceneManager::get_IsLoading()",
+        "nativeFieldPointers": [],
+        "offsetsResolvedAtRuntime": false,
+        "staticFieldAccess": false,
+        "runtimeInvoke": true,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_runtime_invoke(System.IntPtr,System.IntPtr,System.Void**,System.IntPtr&)",
+          "System.Void Il2CppInterop.Runtime.Il2CppException::RaiseExceptionIfNecessary(System.IntPtr)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_object_unbox(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.GameSceneManager",
+        "member": "IsUnloadingGameplay",
+        "propertyFound": true,
+        "getter": "System.Boolean Nivalis.GameSceneManager::get_IsUnloadingGameplay()",
+        "nativeFieldPointers": [],
+        "offsetsResolvedAtRuntime": false,
+        "staticFieldAccess": false,
+        "runtimeInvoke": true,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_runtime_invoke(System.IntPtr,System.IntPtr,System.Void**,System.IntPtr&)",
+          "System.Void Il2CppInterop.Runtime.Il2CppException::RaiseExceptionIfNecessary(System.IntPtr)",
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::il2cpp_object_unbox(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "UnityEngine.CoreModule.dll:UnityEngine.LowLevel.PlayerLoopSystem",
+        "member": "type",
+        "propertyFound": true,
+        "getter": "Il2CppSystem.Type UnityEngine.LowLevel.PlayerLoopSystem::get_type()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.LowLevel.PlayerLoopSystem::NativeFieldInfoPtr_type"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)",
+          "!!0 Il2CppInterop.Runtime.Runtime.Il2CppObjectPool::Get<Il2CppSystem.Type>(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "UnityEngine.CoreModule.dll:UnityEngine.LowLevel.PlayerLoopSystem",
+        "member": "subSystemList",
+        "propertyFound": true,
+        "getter": "Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppReferenceArray`1<UnityEngine.LowLevel.PlayerLoopSystem> UnityEngine.LowLevel.PlayerLoopSystem::get_subSystemList()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.LowLevel.PlayerLoopSystem::NativeFieldInfoPtr_subSystemList"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)",
+          "!!0 Il2CppInterop.Runtime.Runtime.Il2CppObjectPool::Get<Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppReferenceArray`1<UnityEngine.LowLevel.PlayerLoopSystem>>(System.IntPtr)"
+        ]
+      },
+      {
+        "type": "UnityEngine.CoreModule.dll:UnityEngine.LowLevel.PlayerLoopSystem",
+        "member": "updateDelegate",
+        "propertyFound": true,
+        "getter": "UnityEngine.LowLevel.PlayerLoopSystem/UpdateFunction UnityEngine.LowLevel.PlayerLoopSystem::get_updateDelegate()",
+        "nativeFieldPointers": [
+          "System.IntPtr UnityEngine.LowLevel.PlayerLoopSystem::NativeFieldInfoPtr_updateDelegate"
+        ],
+        "offsetsResolvedAtRuntime": true,
+        "staticFieldAccess": false,
+        "runtimeInvoke": false,
+        "calls": [
+          "System.IntPtr Il2CppInterop.Runtime.IL2CPP::Il2CppObjectBaseToPtrNotNull(Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase)",
+          "System.UInt32 Il2CppInterop.Runtime.IL2CPP::il2cpp_field_get_offset(System.IntPtr)",
+          "!!0 Il2CppInterop.Runtime.Runtime.Il2CppObjectPool::Get<UnityEngine.LowLevel.PlayerLoopSystem/UpdateFunction>(System.IntPtr)"
+        ]
+      }
+    ],
+    "changedUnusedMethods": [
+      {
+        "type": "Assembly-CSharp.dll:Nivalis.GameSceneManager",
+        "oldPresent": true,
+        "newPresent": true,
+        "layoutChanged": false,
+        "oldLayout": "value=False;layout=Class;packing=-1;classSize=-1;base=Nivalis.Singleton`1<Nivalis.GameSceneManager>;interfaces=",
+        "newLayout": "value=False;layout=Class;packing=-1;classSize=-1;base=Nivalis.Singleton`1<Nivalis.GameSceneManager>;interfaces=",
+        "fields": {
+          "oldCount": 94,
+          "newCount": 93,
+          "removed": [
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_DisableCreditsPrewarming_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_DisableLoadingFix_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_EnableCreditsPrewarming_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_EnableLoadingFix_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_SetLowMemoryStateAuto_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_SetLowMemoryStateOff_Private_Void_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_SetLowMemoryStateOn_Private_Void_0;static=True;offset=-1"
+          ],
+          "added": [
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_Dev_CreditsPrewarming_Private_Boolean_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_Dev_CurrentLowMemoryMode_Private_LowMemoryMode_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_Dev_SetLowMemoryMode_Private_Void_LowMemoryMode_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_Dev_UseMemoryOptimizations_Private_Boolean_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_SetCreditsPrewarming_Private_Void_Boolean_0;static=True;offset=-1",
+            "System.IntPtr Nivalis.GameSceneManager::NativeMethodInfoPtr_SetMemoryOptimizations_Private_Void_Boolean_0;static=True;offset=-1"
+          ]
+        },
+        "properties": {
+          "oldCount": 51,
+          "newCount": 51,
+          "removed": [],
+          "added": []
+        },
+        "methods": {
+          "oldCount": 129,
+          "newCount": 128,
+          "removed": [
+            "System.Void Nivalis.GameSceneManager::DisableCreditsPrewarming();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::DisableLoadingFix();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::EnableCreditsPrewarming();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::EnableLoadingFix();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::SetLowMemoryStateAuto();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::SetLowMemoryStateOff();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::SetLowMemoryStateOn();static=False;virtual=False"
+          ],
+          "added": [
+            "Nivalis.GameSceneManager/LowMemoryMode Nivalis.GameSceneManager::Dev_CurrentLowMemoryMode();static=False;virtual=False",
+            "System.Boolean Nivalis.GameSceneManager::Dev_CreditsPrewarming();static=False;virtual=False",
+            "System.Boolean Nivalis.GameSceneManager::Dev_UseMemoryOptimizations();static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::Dev_SetLowMemoryMode(Nivalis.GameSceneManager/LowMemoryMode);static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::SetCreditsPrewarming(System.Boolean);static=False;virtual=False",
+            "System.Void Nivalis.GameSceneManager::SetMemoryOptimizations(System.Boolean);static=False;virtual=False"
+          ]
+        }
+      },
+      {
+        "type": "UnityEngine.CoreModule.dll:UnityEngine.Texture2D",
+        "oldPresent": true,
+        "newPresent": true,
+        "layoutChanged": false,
+        "oldLayout": "value=False;layout=Class;packing=-1;classSize=-1;base=UnityEngine.Texture;interfaces=",
+        "newLayout": "value=False;layout=Class;packing=-1;classSize=-1;base=UnityEngine.Texture;interfaces=",
+        "fields": {
+          "oldCount": 84,
+          "newCount": 88,
+          "removed": [
+            "UnityEngine.Texture2D/GetRawImageDataSizeDelegate UnityEngine.Texture2D::GetRawImageDataSizeDelegateField;static=True;offset=-1",
+            "UnityEngine.Texture2D/GetRawTextureDataDelegate UnityEngine.Texture2D::GetRawTextureDataDelegateField;static=True;offset=-1",
+            "UnityEngine.Texture2D/GetWritableImageDataDelegate UnityEngine.Texture2D::GetWritableImageDataDelegateField;static=True;offset=-1"
+          ],
+          "added": [
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr__ctor_Internal_Void_Int32_Int32_GraphicsFormat_TextureCreationFlags_Int32_IntPtr_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr__ctor_Public_Void_Int32_Int32_DefaultFormat_TextureCreationFlags_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr__ctor_Public_Void_Int32_Int32_GraphicsFormat_TextureCreationFlags_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr_GetRawImageDataSize_Private_UInt64_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr_GetRawTextureData_Public_NativeArray_1_T_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr_GetWritableImageData_Private_IntPtr_Int32_0;static=True;offset=-1",
+            "System.IntPtr UnityEngine.Texture2D::NativeMethodInfoPtr_ValidateFormat_Internal_Boolean_GraphicsFormat_Int32_Int32_0;static=True;offset=-1"
+          ]
+        },
+        "properties": {
+          "oldCount": 22,
+          "newCount": 22,
+          "removed": [],
+          "added": []
+        },
+        "methods": {
+          "oldCount": 104,
+          "newCount": 106,
+          "removed": [
+            "Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppStructArray`1<System.Byte> UnityEngine.Texture2D::GetRawTextureData();static=False;virtual=False"
+          ],
+          "added": [
+            "System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32,UnityEngine.Experimental.Rendering.DefaultFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags);static=False;virtual=False",
+            "System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags,System.Int32,System.IntPtr);static=False;virtual=False",
+            "System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags);static=False;virtual=False"
+          ]
+        }
+      }
+    ],
+    "unityVersion": "2020.3.49f1",
+    "unityPlayerChanged": true,
+    "nativeHookReview": "DXGI factory slots 10/15 and Direct3D COM interfaces; Unity rendering callback uses GL.IssuePluginEvent and native texture handles. No UnityPlayer/GameAssembly RVA or hardcoded object offsets. Regenerated managed Unity interfaces resolve. Runtime rendering still requires validation. Actual game presentation, DLAA and mode-switch smoke test now passed with player visual confirmation.",
+    "loaderReview": "BepInEx 788 regenerated live bindings for Unity 2020.3.49f1 and initialized all reviewed hooks; fresh gameplay logs captured.",
+    "necessaryChange": "Update exact game/Unity engine acceptance, pair each supported game hash with its UnityPlayer hash, rebuild against regenerated bindings.",
+    "candidateGameplayValidated": true
+  },
+  "installer": {
+    "passed": 39,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "launcher_extraction_guard_and_resources",
+        "passed": true,
+        "details": "ZIP-only launch refused before PowerShell; icon and executable manifest present"
+      },
+      {
+        "check": "fresh_install_via_actual_launcher",
+        "passed": true,
+        "details": {
+          "pluginFiles": 10,
+          "loaderFiles": 228,
+          "gameBuild": "25959175"
+        }
+      },
+      {
+        "check": "repeat_install",
+        "passed": true,
+        "details": "owned 0.5.4 reinstall accepted and content identical"
+      },
+      {
+        "check": "upgrade_from_actual_050_artifact",
+        "passed": true,
+        "details": "actual published 0.5.0-r2 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.4 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_050_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.0 artifact recovery installs guarded 0.5.4 DLL and records current detected game build"
+      },
+      {
+        "check": "upgrade_from_actual_051_artifact",
+        "passed": true,
+        "details": "actual published 0.5.1 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.4 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_051_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.1 artifact recovery installs guarded 0.5.4 DLL and records current detected game build"
+      },
+      {
+        "check": "upgrade_from_actual_052_artifact",
+        "passed": true,
+        "details": "actual published 0.5.2 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.4 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_052_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.2 artifact recovery installs guarded 0.5.4 DLL and records current detected game build"
+      },
+      {
+        "check": "upgrade_from_actual_053_artifact",
+        "passed": true,
+        "details": "actual published 0.5.3 managed/native/FG files and seeded ownership upgraded; every installed digest matches 0.5.4 manifest; configuration/saves/captures/generated caches preserved byte for byte"
+      },
+      {
+        "check": "recovery_from_actual_053_artifact_records_current_game_build",
+        "passed": true,
+        "details": "actual 0.5.3 artifact recovery installs guarded 0.5.4 DLL and records current detected game build"
+      },
+      {
+        "check": "uninstall_owned_loader_and_preserve_user_data",
+        "passed": true,
+        "details": "all individually owned unchanged plugin/loader files removed; saves/configuration/caches/captures retained"
+      },
+      {
+        "check": "foreign_plugin_uninstall_preserves_loader",
+        "passed": true,
+        "details": "NightShift plugin removed; other plugin and owned loader preserved with explanation"
+      },
+      {
+        "check": "compatible_foreign_loader_reuse_and_uninstall_preservation",
+        "passed": true,
+        "details": "existing compatible BepInEx loader reused without claiming ownership; uninstall preserves every pre-existing loader file"
+      },
+      {
+        "check": "changed_managed_plugin_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_loader_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "changed_dxgi_preservation",
+        "passed": true,
+        "details": "install stopped before writes; uninstall preserved changed file"
+      },
+      {
+        "check": "foreign_plugin_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_loader_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "foreign_dxgi_install_refusal",
+        "passed": true,
+        "details": "foreign file retained with no ownership/loader/plugin writes"
+      },
+      {
+        "check": "unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "unknown_unityplayer_refusal",
+        "passed": true,
+        "details": "unsupported identity rejected before any installed files or ownership manifest"
+      },
+      {
+        "check": "payload_checksum_mismatch_refusal",
+        "passed": true,
+        "details": "mismatched packaged managed DLL refused before installed writes"
+      },
+      {
+        "check": "recovery_hashes_owned_removal_repeat_and_reinstall",
+        "passed": true,
+        "details": "matching guarded 0.5.4 DLL installed; owned FG files removed; repeat no-op; full 0.5.4 reinstall restores FG files"
+      },
+      {
+        "check": "recovery_changed_owned_file_refusal",
+        "passed": true,
+        "details": "changed owned proxy detected before any recovery change"
+      },
+      {
+        "check": "recovery_unowned_managed_plugin_refusal",
+        "passed": true,
+        "details": "unowned managed plugin preserved"
+      },
+      {
+        "check": "recovery_duplicate_managed_ownership_refusal",
+        "passed": true,
+        "details": "duplicate ownership entry refused before writes"
+      },
+      {
+        "check": "uninstall_manifest_path_containment",
+        "passed": true,
+        "details": "manifest traversal rejected and external file untouched"
+      },
+      {
+        "check": "recovery_unknown_gameassembly_refusal",
+        "passed": true,
+        "details": "recovery unsupported game refused before writes"
+      },
+      {
+        "check": "idempotent_recovery_game_guard",
+        "passed": true,
+        "details": "repeated recovery revalidates current game identity and rejects unsupported binary"
+      },
+      {
+        "check": "idempotent_recovery_changed_installed_plugin_guard",
+        "passed": true,
+        "details": "repeated recovery checks installed managed ownership digest and preserves changed DLL"
+      },
+      {
+        "check": "recovery_payload_checksum_guard_initial_and_idempotent",
+        "passed": true,
+        "details": "corrupt recovery payload refused for both initial and repeated recovery"
+      },
+      {
+        "check": "install_nested_junction_path_containment",
+        "passed": true,
+        "details": "nested junction traversal refused and external fixture untouched"
+      },
+      {
+        "check": "uninstall_nested_junction_path_containment",
+        "passed": true,
+        "details": "uninstall refused nested junction before deleting any external managed plugin"
+      },
+      {
+        "check": "recovery_nested_junction_path_containment",
+        "passed": true,
+        "details": "recovery refused nested junction before overwriting any external managed plugin"
+      },
+      {
+        "check": "running_target_guard_actual_process",
+        "passed": true,
+        "details": "real harmless Nivalis Nights process blocks its exact target path for install/recovery; separate fixture installation passes while it remains running; no Get-Process mocks"
+      },
+      {
+        "check": "shipped_recovery_uninstall_cmd_wrappers",
+        "passed": true,
+        "details": "shipping recovery/uninstall .cmd wrappers accept relocated folder with spaces and propagate successful operations"
+      },
+      {
+        "check": "exact_game_unity_pairs_and_mismatch_refusals",
+        "passed": true,
+        "details": "current and previous exact engine pairs accepted; both mixed pairs refused before writes, including recovery"
+      },
+      {
+        "check": "original_game_and_shipped_scripts_preserved",
+        "passed": true,
+        "details": {
+          "installedGameIdentityHashes": {
+            "Nivalis Nights.exe": "B2B0921F504A5107F4254A6D73E3C7A83D334AB5B2FE9CFCCE5F64653EA8FC45",
+            "GameAssembly.dll": "BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68",
+            "UnityPlayer.dll": "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6"
+          },
+          "shippedScriptHashes": {
+            "install.ps1": "B737DAB2B2F6FA37EC760B5765A3A3F973FEBCCD7D4CEF57480737A39CBAF367",
+            "Rollback-FG.ps1": "14B13B5360CCECB6CD0C51BF248EC9794AC8A5CE8496D1B1F75E99617D9904A1"
+          },
+          "fixtureGameFiles": "hardlinks used only for read-only identity checks; corruption cases unlink before writing"
+        }
+      }
+    ],
+    "scope": "Real shipped scripts/launcher in isolated fixtures; actual published 0.5.0-r2, 0.5.1, 0.5.2 and 0.5.3 upgrades/recoveries. No game-process mocks."
+  },
+  "native": {
+    "checks": [
+      {
+        "probe": "ngx",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "probe": "proxy",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "probe": "native-guard-current-pair",
+        "exitCode": 0,
+        "expectedExitCode": 0,
+        "passed": true,
+        "productionSupportedBinaryUsed": true,
+        "probeBypassEnabled": false
+      },
+      {
+        "probe": "native-guard-previous-pair",
+        "exitCode": 0,
+        "expectedExitCode": 0,
+        "passed": true,
+        "productionSupportedBinaryUsed": true,
+        "probeBypassEnabled": false
+      },
+      {
+        "probe": "native-guard-old-game-new-unity",
+        "exitCode": 3,
+        "expectedExitCode": 3,
+        "passed": true,
+        "productionSupportedBinaryUsed": true,
+        "probeBypassEnabled": false
+      },
+      {
+        "probe": "native-guard-new-game-old-unity",
+        "exitCode": 3,
+        "expectedExitCode": 3,
+        "passed": true,
+        "productionSupportedBinaryUsed": true,
+        "probeBypassEnabled": false
+      },
+      {
+        "probe": "native-guard-missing-unity",
+        "exitCode": 3,
+        "expectedExitCode": 3,
+        "passed": true,
+        "productionSupportedBinaryUsed": true,
+        "probeBypassEnabled": false
+      }
+    ],
+    "scope": "NGX evaluate/output readback, dimensions, repeated init/shutdown, state restoration; exact DXGI proxy ordinary presentation, resize and release. Explicit standalone probe mode; gameplay FG modes are checked separately."
+  },
+  "actualInstall": {
+    "checkedAt": "2026-10-15T21:16:10.341656+00:00",
+    "version": "0.5.4",
+    "gameBuild": "25959175",
+    "pluginFiles": [
+      {
+        "path": "BepInEx\\plugins\\NightShift\\NightShift.dll",
+        "hash": "00FC9CC2BE74026780EC4C6D956100B966A6D16A4F7A6CCD021A50E29396F565"
+      },
+      {
+        "path": "BepInEx\\NightShift\\native\\NightShiftDLSS.dll",
+        "hash": "859D01C2F8E156CDF0D0960A0542DC4BD98FE726616C86A9851CC7610833E891"
+      },
+      {
+        "path": "BepInEx\\NightShift\\native\\nvngx_dlss.dll",
+        "hash": "3975567B8943C53ACCE397F2B72380092F84F162D00B0D2C7D08A1025C563983"
+      },
+      {
+        "path": "dxgi.dll",
+        "hash": "A23E705D52E27A52383429C46B5C3334764A9AE099DB74D1FF412E396DC2F7D9"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\nvngx_dlssg.dll",
+        "hash": "FF6E90EB78B827927DFF5B4ECC6B1C870C2E9BCA29ED9F48C7D348CC9E170B82"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\sl.common.dll",
+        "hash": "82924A8954DD671E09351C5DE0EB87AD0EB25B944CC9F9AB955CA1D9950DE15D"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\sl.dlss_g.dll",
+        "hash": "F4A6B2B14DCC0B1485989E430D3B4E3A44AC1800B92BA1AD74F476E64FB2B09C"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\sl.interposer.dll",
+        "hash": "8C87C9499461DA561EDD529AA9BF7831D67D7B94EBB1C1A5ED54EF4934E1EA4C"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\sl.pcl.dll",
+        "hash": "F13D51CFA05F4CD514DF2026049E2DB8ADF359221713170AD386FD499915B582"
+      },
+      {
+        "path": "BepInEx\\NightShift\\framegen\\runtime\\sl.reflex.dll",
+        "hash": "0CE9725E3E03EA9E7F81D008B57F33EE365973D2E349131C8B1C3E3378FE2DB0"
+      }
+    ],
+    "loaderFilesVerified": 228,
+    "configurationPreservedByteForByte": true,
+    "savesAndSettingsPreservedByteForByte": true,
+    "foreignFilesPreserved": true,
+    "originalInteropPreserved": true,
+    "developmentControlNotEnabled": true,
+    "rollbackBackup": "C:\\Users\\baysi\\Documents\\ChatGPT\\Nightshift\\artifacts\\20261015-release-0.5.4\\installed-before-054",
+    "gameplayValidated": false
+  },
+  "gameplay": {
+    "checkedAt": "2026-10-15T21:20:10.259404+00:00",
+    "version": "0.5.4",
+    "gameBuild": "25959175",
+    "playerReport": "All modes work and look correct",
+    "playerReportSource": "Direct user reply to installed-candidate DLAA/2x/3x/4x/Off smoke-test question",
+    "modesObservedInFreshGameplayLog": [
+      "On2x",
+      "On3x",
+      "On4x",
+      "Off"
+    ],
+    "dlaaGpuEvaluationObserved": true,
+    "startupAndHooksPassed": true,
+    "scope": "Player visual and mode-switch smoke check on RTX 5070 at 2560x1440 plus fresh startup/render logs; no controlled FPS or physical-presentation benchmark.",
+    "evidence": [
+      "final-startup-and-modes.log",
+      "Player.log",
+      "dlss-status.json"
+    ]
+  },
+  "limitations": [
+    "Player smoke check on RTX 5070, 2560x1440; no controlled FPS or physical presentation benchmark.",
+    "Broader hardware, long sessions, scene transitions and moving-object/UI quality remain under review.",
+    "Previously observed Unity shutdown fault is not claimed fixed."
+  ]
+}

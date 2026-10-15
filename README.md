@@ -1,6 +1,6 @@
-# NightShift 0.5.3
+# NightShift 0.5.4
 
-NVIDIA frame generation and native-resolution DLAA for **Nivalis Nights**. This is the source for the 0.5.3 preview, for Steam build 25828494.
+NVIDIA frame generation and native-resolution DLAA for **Nivalis Nights**. This is the source for the 0.5.4 preview, for Steam build 25959175 and Unity 2020.3.49f1. Player-approved DLAA and frame-generation gameplay passed.
 
 **[Download NightShift and installation guide](https://nightshift-nivalis.its-jaxx.chatgpt.site)**
 
@@ -8,7 +8,7 @@ NVIDIA frame generation and native-resolution DLAA for **Nivalis Nights**. This 
 
 Download the ZIP from the website. Close the game, right-click the ZIP and choose **Extract All**, then open the extracted folder and double-click **Install NightShift.exe**. Launch the game normally through Steam and load your save.
 
-Already have NightShift 0.5.0, 0.5.1 or 0.5.2 installed? Save and close the game, extract 0.5.3 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
+Already have NightShift 0.5.0, 0.5.1, 0.5.2 or 0.5.3 installed? Save and close the game, extract 0.5.4 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
 
 | Key | Action |
 | --- | --- |
@@ -18,7 +18,7 @@ Already have NightShift 0.5.0, 0.5.1 or 0.5.2 installed? Save and close the game
 
 DLAA starts on. Frame generation starts off each launch. Hiding the menu keeps your selected modes running. **DLSS upscaling is coming soon.**
 
-This preview supports Steam builds **25828494**, **25738165**, **25680465**, **25653325** and **25603526**, using Unity **2020.3.44f1**. The installer and plugin check the game binaries before enabling hooks. Frame generation modes depend on the GPU and driver capabilities reported by NVIDIA. See [installation requirements](payload/INSTALL.md) and [validation status](payload/STATUS.md).
+This preview supports Steam build **25959175**, Unity **2020.3.49f1**, with exact binary checks. The earlier supported game/Unity 2020.3.44f1 pairs remain in the guarded manifest. Current-build DLAA and frame-generation gameplay passed. The installer and plugin check the game binaries before enabling hooks. Frame generation modes depend on the GPU and driver capabilities reported by NVIDIA. See [installation requirements](payload/INSTALL.md) and [validation status](payload/STATUS.md).
 
 ## Source layout
 
@@ -30,9 +30,9 @@ The folders follow the download's layout so the installer and its support script
 | `payload/native/` | D3D11/D3D12 presentation bridge, NGX bridge for DLAA, and standalone probes |
 | `payload/installer-source/` | Native Windows installer launcher, icon, and manifest |
 | `payload/install.ps1` | Installation, ownership checks, and removal |
-| `payload/Rollback-FG.ps1` | Recovery to the matching 0.5.3 DLAA-only build |
+| `payload/Rollback-FG.ps1` | Recovery to the matching 0.5.4 DLAA-only build |
 | `payload/third-party/` | Streamline headers, MinHook source, and license notices |
-| `payload/release.json` | Manifest for the tested 0.5.3 download |
+| `payload/release.json` | Manifest for the tested 0.5.4 download |
 | `Tools/` | Download-package installation, removal, and recovery entry points |
 
 The download includes compiled files and runtime dependencies. A source checkout does not include those binaries or the game-generated assemblies; use the website ZIP for installation. The release manifest records the shipping binaries, so a locally rebuilt DLL will need a freshly generated manifest before it can be packaged with the installer.

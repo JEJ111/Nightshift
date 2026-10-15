@@ -38,11 +38,10 @@ static bool IsTarget() {
     wchar_t path[32768]={}; GetModuleFileNameW(nullptr,path,32768);
     return _wcsicmp(std::filesystem::path(path).filename().c_str(),L"Nivalis Nights.exe")==0;
 }
-static bool SupportedBinary() {
-    if(probeMode) return true;
-    auto path=std::filesystem::path(FG_Root())/L"GameAssembly.dll";
+static std::string BinaryHash(const wchar_t* filename) {
+    auto path=std::filesystem::path(FG_Root())/filename;
     HANDLE file=CreateFileW(path.c_str(),GENERIC_READ,FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE,nullptr,OPEN_EXISTING,FILE_FLAG_SEQUENTIAL_SCAN,nullptr);
-    if(file==INVALID_HANDLE_VALUE) return false;
+    if(file==INVALID_HANDLE_VALUE) return {};
     BCRYPT_ALG_HANDLE algorithm=nullptr; BCRYPT_HASH_HANDLE hash=nullptr;
     bool ok=BCryptOpenAlgorithmProvider(&algorithm,BCRYPT_SHA256_ALGORITHM,nullptr,0)>=0;
     if(ok) ok=BCryptCreateHash(algorithm,&hash,nullptr,0,nullptr,0,0)>=0;
@@ -55,7 +54,16 @@ static bool SupportedBinary() {
     unsigned char digest[32]={}; if(ok) ok=BCryptFinishHash(hash,digest,32,0)>=0;
     if(hash) BCryptDestroyHash(hash); if(algorithm) BCryptCloseAlgorithmProvider(algorithm,0); CloseHandle(file);
     char value[65]={}; for(int i=0;i<32;i++) std::sprintf(value+i*2,"%02X",digest[i]);
-    return ok && (std::strcmp(value,"9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D")==0 || std::strcmp(value,"D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504")==0 || std::strcmp(value,"0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")==0 || std::strcmp(value,"6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3")==0 || std::strcmp(value,"F67D5C384A12B67EF4458633AE48D3B3986C91E466C5CB8DADB1130EE2DA244A")==0);
+    return ok ? std::string(value) : std::string();
+}
+static bool SupportedBinary() {
+    if(probeMode) return true;
+    auto game=BinaryHash(L"GameAssembly.dll");
+    if(game.empty()) return false;
+    const char* value=game.c_str();
+    if(!(std::strcmp(value,"9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D")==0 || std::strcmp(value,"D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504")==0 || std::strcmp(value,"0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D")==0 || std::strcmp(value,"6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3")==0 || std::strcmp(value,"F67D5C384A12B67EF4458633AE48D3B3986C91E466C5CB8DADB1130EE2DA244A")==0 || std::strcmp(value,"BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68")==0)) return false;
+    auto unity=BinaryHash(L"UnityPlayer.dll");
+    return unity == (game=="BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68" ? "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6" : "8B457114AF608690521AFB6D3770A27AC54197411EFBD184DED833DD38DB2686");
 }
 static bool Bootstrap() {
     if(insideBootstrap || !IsTarget()) return false;

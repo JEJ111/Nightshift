@@ -106,7 +106,7 @@ static bool Initialize(ID3D11Device* inputDevice)
     info.PathListInfo.Path=searchPaths; info.PathListInfo.Length=1;
     // Independent project GUID; never impersonates the game's NVIDIA application ID.
     auto result=NVSDK_NGX_D3D11_Init_with_ProjectID("19f82428-6481-48c5-b47c-e2df3df2dc92",
-        NVSDK_NGX_ENGINE_TYPE_UNITY,"2020.3.44f1",cache.c_str(),device.Get(),&info);
+        NVSDK_NGX_ENGINE_TYPE_UNITY,"2020.3",cache.c_str(),device.Get(),&info);
     SetResult("NGX init",result);
     if(NVSDK_NGX_FAILED(result)) return false;
     initialized=true;

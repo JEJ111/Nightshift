@@ -13,7 +13,7 @@ namespace NightShift;
 public sealed class Plugin : BasePlugin
 {
     public const string Id = "local.nivalis.nightshift";
-    public const string Version = "0.5.3";
+    public const string Version = "0.5.4";
     internal static Plugin Instance = null!;
     internal ConfigEntry<bool> Optimize = null!;
     internal ConfigEntry<bool> Hud = null!;
@@ -39,18 +39,32 @@ public sealed class Plugin : BasePlugin
         FrameGeneration.Value=FrameGenMode.Off;
         DevelopmentControl=Config.Bind("Development","EnableControlFile",false,"Local render validation only: poll a bounded render-test-request.json. Disabled for normal play; captures can stall the GPU.");
         Log.LogInfo($"NightShift {Version} | Unity {Application.unityVersion} | {SystemInfo.graphicsDeviceName} | {SystemInfo.graphicsDeviceType}");
-        if (Application.unityVersion != "2020.3.44f1")
+        if (Application.unityVersion != "2020.3.44f1" && Application.unityVersion != "2020.3.49f1")
         {
             Log.LogError("Unvalidated Unity version. Refusing to patch this build.");
             return;
         }
+        string gameHash;
         using (var file = System.IO.File.OpenRead(System.IO.Path.Combine(Paths.GameRootPath,"GameAssembly.dll")))
         {
             using var sha = SHA256.Create();
             string hash = Convert.ToHexString(sha.ComputeHash(file));
-            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504" && hash != "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D" && hash != "6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3" && hash != "F67D5C384A12B67EF4458633AE48D3B3986C91E466C5CB8DADB1130EE2DA244A")
+            gameHash = hash;
+            if (hash != "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D" && hash != "D7D7FEF8B76699AE6A9F70B111C239B013BA00261A02A85BDB394BDE38C46504" && hash != "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D" && hash != "6BFAE1C6445A755B915550B005994BF029208C8B276CF3DA59A4CCE2724435D3" && hash != "F67D5C384A12B67EF4458633AE48D3B3986C91E466C5CB8DADB1130EE2DA244A" && hash != "BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68")
             {
                 Log.LogError("Unvalidated game binary. Refusing hooks until this update is checked.");
+                return;
+            }
+        }
+        bool updatedEngine = gameHash == "BB14ABA0BE68D2A2D2968C49B1800FE753DE8CCB7208C1FE8A726AD326FB3C68";
+        string expectedUnityHash = updatedEngine ? "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6" : "8B457114AF608690521AFB6D3770A27AC54197411EFBD184DED833DD38DB2686";
+        string expectedUnityVersion = updatedEngine ? "2020.3.49f1" : "2020.3.44f1";
+        using (var player = System.IO.File.OpenRead(System.IO.Path.Combine(Paths.GameRootPath, "UnityPlayer.dll")))
+        {
+            using var playerSha = SHA256.Create();
+            if (Application.unityVersion != expectedUnityVersion || Convert.ToHexString(playerSha.ComputeHash(player)) != expectedUnityHash)
+            {
+                Log.LogError("Unvalidated game/Unity renderer pair. Refusing to patch this build.");
                 return;
             }
         }
