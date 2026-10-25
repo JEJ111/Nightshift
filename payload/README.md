@@ -1,4 +1,4 @@
-# NightShift 0.5.5
+# NightShift 0.5.6
 
 A community preview mod adding NVIDIA frame generation and native-resolution DLAA to Nivalis Nights.
 
@@ -14,7 +14,7 @@ Save and close the game, extract the entire ZIP, then double-click **Install Nig
 
 DLAA starts enabled for gameplay. Frame generation starts off each launch. Hiding the menu preserves the selected modes. DLSS upscaling is **coming soon**; Quality, Balanced and Performance are not selectable in this release.
 
-Already have NightShift 0.5.0, 0.5.1, 0.5.2, 0.5.3 or 0.5.4 installed? Save and close the game, extract 0.5.5 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
+Already have NightShift 0.5.0, 0.5.1, 0.5.2, 0.5.3, 0.5.4 or 0.5.5 installed? Save and close the game, extract 0.5.6 into a new folder, and run its installer over the existing installation. You do not need to uninstall first. Your configuration, saves, captures and generated caches are preserved. If an installed mod file was changed or belongs to another mod, the installer stops with an explanation.
 
 ## Hardware and game compatibility
 
@@ -22,25 +22,25 @@ DLAA requires NVIDIA GeForce RTX hardware. NVIDIA frame generation requires comp
 
 The game continues rendering through **DirectX 11**. A game-local DXGI bridge presents frames through an independent D3D12 device on the same adapter.
 
-This preview supports Steam build **25984046**, Unity **2020.3.49f1**. Earlier supported Unity 2020.3.44f1 pairs remain guarded separately; mixed game/engine pairs are refused. Installation and native bootstrap check the game binaries. A changed game build stops installation or disables the hooks until reviewed.
+This preview supports Steam build **26118043**, Unity **2020.3.49f1**. Earlier supported Unity 2020.3.44f1 pairs remain guarded separately; mixed game/engine pairs are refused. Installation and native bootstrap check the game binaries. A changed game build stops installation or disables the hooks until reviewed.
 
 ## Validation
 
-October 19 compatibility release for public Steam build 25984046. Regenerated IL2CPP review resolved all 177 used API references and confirmed all 11 hook signatures. GameAssembly and IL2CPP metadata changed; UnityPlayer remains byte-identical to the preceding validated build 25959175 (Unity 2020.3.49f1). Exact game/UnityPlayer pairing guards were updated in the installer, recovery, managed plugin and native proxy. All used game and Unity interfaces and exact hook signatures remain valid; the existing renderer implementation is retained.
+October 25 compatibility release for public Steam build 26118043. Regenerated IL2CPP review resolved all 177 used API references and confirmed all 11 hook signatures. GameAssembly and IL2CPP metadata changed; UnityPlayer remains byte-identical to the preceding validated build 25984046 (Unity 2020.3.49f1). Exact game/UnityPlayer pairing guards were updated in the installer, recovery, managed plugin and native proxy. All used game and Unity interfaces and exact hook signatures remain valid; the existing renderer implementation is retained.
 
-The player confirmed that all modes work and look correct. Fresh 0.5.5 logs show successful hook startup, DLAA GPU evaluation and 2x, 3x, 4x and Off selected in gameplay on RTX 5070 at 2560x1440.
+The player confirmed that all modes work and look correct. Fresh 0.5.6 logs show successful hook startup, DLAA GPU evaluation and 2x, 3x, 4x and Off selected in gameplay on RTX 5070 at 2560x1440.
 
-All 41 installer/preservation checks passed, including upgrades and recovery from the actual published 0.5.0-r2, 0.5.1, 0.5.2, 0.5.3 and 0.5.4 artifacts. Native NGX and DXGI probes passed. Existing configuration, saves, settings, other mod files and caches were preserved during the actual upgrade.
+All 43 installer/preservation checks passed, including upgrades and recovery from the actual published 0.5.0-r2, 0.5.1, 0.5.2, 0.5.3, 0.5.4 and 0.5.5 artifacts. Native NGX and DXGI probes passed. Existing configuration, saves, settings, other mod files and caches were preserved during the actual upgrade.
 
 This is a player smoke check, not a controlled FPS or physical-display pacing benchmark. Broader hardware, long sessions, scene transitions and moving-object/UI quality remain under review. The previously observed Unity shutdown fault is not claimed fixed.
 
-See STATUS.md and verification/0.5.5.json for current evidence.
+See STATUS.md and verification/0.5.6.json for current evidence.
 
 ## Removal and recovery
 
 Close the game, then run **Tools/Uninstall NightShift.cmd**. Only unchanged files owned by this installer are removed. An owned loader is retained if other plugins need it.
 
-**Tools/Restore Working DLSS.cmd** restores the matching 0.5.5 DLAA-only plugin, preserving its native DLSS bridge and removing the owned frame-generation files. Unknown or changed files stop rollback before changes.
+**Tools/Restore Working DLSS.cmd** restores the matching 0.5.6 DLAA-only plugin, preserving its native DLSS bridge and removing the owned frame-generation files. Unknown or changed files stop rollback before changes.
 
 ## Source
 
