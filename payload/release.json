@@ -1,14 +1,14 @@
 {
-  "version": "0.5.6",
-  "gameBuild": "26118043",
-  "gameAssemblySha256": "8A1265FF519B6D876E5403684CA9581FB18825FA6F818DCA1C5346AD8C147E46",
-  "pluginSha256": "08787C43A0D3C552313EE11A7835D83A680640520128C20BAC74C68ECB50FE56",
+  "version": "0.5.7",
+  "gameBuild": "26295359",
+  "gameAssemblySha256": "86545EF32D8D28969E166FA4DCF8DAD7922315ED8F1913A22D8635848633639A",
+  "pluginSha256": "00C6132996CD60A716D7C5672920F383062B4BFBF16F108EBF48A7435743ED51",
   "bepinexZipSha256": "F4CC496BD098A0DF4164B81E3737297707F13A47C2478DBA2F60EEFAB784817A",
-  "nativeBridgeSha256": "AF4151257594326143393D308B622E55BA46675273D9372029080462AE1FB344",
+  "nativeBridgeSha256": "0149F434A66361CEE0F953943F490DDB506264DC8401D616AB7D2856E121B196",
   "dlssRuntimeSha256": "3975567B8943C53ACCE397F2B72380092F84F162D00B0D2C7D08A1025C563983",
   "dlssSdkCommit": "374959484e79a640feaba44c93ac8cfb0a03f5b5",
   "status": "preview",
-  "liveGameValidation": "build-26118043-player-approved-DLAA-and-2x-3x-4x-Off-gameplay; final-0.5.6-hooks-and-DLAA-GPU-evaluation-confirmed; no-controlled-benchmark",
+  "liveGameValidation": "build-26295359-player-approved-DLAA-and-2x-3x-4x-Off-gameplay; final-0.5.7-hooks-and-DLAA-GPU-evaluation-confirmed; no-controlled-benchmark",
   "performanceValidation": "sdk-generated-presents-confirmed-controlled-benchmark-and-physical-pacing-pending",
   "frameGeneration": true,
   "normalInstallAllowed": true,
@@ -23,7 +23,7 @@
   "frameGenerationFiles": [
     {
       "name": "dxgi.dll",
-      "sha256": "44F68833D1D98CBEBE5FE9CDF5237B12F9CC13DA5907335808859EC289D7141B"
+      "sha256": "FE668FB702B7DAED108065B4A7841B348CCDBBDFF9B4A18C71EC4101DAFF3636"
     },
     {
       "name": "nvngx_dlssg.dll",
@@ -78,7 +78,7 @@
     "apiResult": 0,
     "fgStatus": 0,
     "transitionsAndResize": "passed",
-    "scope": "Historical 0.5.0 standalone renderer evidence; retained renderer implementation. Not a new 0.5.6 gameplay benchmark."
+    "scope": "Historical 0.5.0 standalone renderer evidence; retained renderer implementation. Not a new 0.5.7 gameplay benchmark."
   },
   "supportedGameBuilds": [
     {
@@ -128,12 +128,18 @@
       "gameAssemblySha256": "8A1265FF519B6D876E5403684CA9581FB18825FA6F818DCA1C5346AD8C147E46",
       "unityPlayerSha256": "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6",
       "unityVersion": "2020.3.49f1"
+    },
+    {
+      "build": "26295359",
+      "gameAssemblySha256": "86545EF32D8D28969E166FA4DCF8DAD7922315ED8F1913A22D8635848633639A",
+      "unityPlayerSha256": "CFB43640C382ACA31FD2D482A4DD83122E23510F9893F92DFD0ECABFE30306A6",
+      "unityVersion": "2020.3.49f1"
     }
   ],
-  "compatibilityNote": "October 25 compatibility release for public build 26118043: regenerated IL2CPP review passed 177 used API references and 11 hook signatures; UnityPlayer remains unchanged on reviewed Unity 2020.3.49f1; exact engine/game pairs remain guarded. Player-approved DLAA and frame-generation gameplay, 43 installer/preservation checks and native probes passed.",
-  "metadataSha256": "C894031A903839ED1A382D8496EF2C746C196C9FF8CFB9823050C1D97BB1033E",
-  "recoveryVersion": "0.5.6",
+  "compatibilityNote": "October 30 compatibility release for public build 26295359: regenerated IL2CPP review passed 177 used API references and 11 hook signatures; UnityPlayer remains unchanged on reviewed Unity 2020.3.49f1; exact engine/game pairs remain guarded. Player-approved DLAA and frame-generation gameplay, 45 installer/preservation checks and native probes passed.",
+  "metadataSha256": "5581C98E405E7FA01DA89A392F38D9C8701F2776B7413325ED350490DDBC1DB6",
+  "recoveryVersion": "0.5.7",
   "recoveryMode": "DLAAOnly",
-  "recoveryPluginSha256": "08787C43A0D3C552313EE11A7835D83A680640520128C20BAC74C68ECB50FE56",
-  "verification": "verification/0.5.6.json"
+  "recoveryPluginSha256": "00C6132996CD60A716D7C5672920F383062B4BFBF16F108EBF48A7435743ED51",
+  "verification": "verification/0.5.7.json"
 }
