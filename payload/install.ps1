@@ -72,7 +72,7 @@ if ($Uninstall) {
 $currentGameHash=File-Hash (Resolve-Contained 'GameAssembly.dll')
 $releaseManifest = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'release.json') -Raw | ConvertFrom-Json
 $supportedBuild = @($releaseManifest.supportedGameBuilds | Where-Object { $_.gameAssemblySha256 -eq $currentGameHash })
-if ($supportedBuild.Count -ne 1) { throw 'This preview supports Steam builds 25603526, 25653325, 25680465, 25738165, 25828494, 25959175, 25984046, 26118043 and 26295359. The game binary has changed; revalidate before installing.' }
+if ($supportedBuild.Count -ne 1) { throw 'This preview supports Steam builds 25603526, 25653325, 25680465, 25738165, 25828494, 25959175, 25984046, 26118043, 26295359 and 26480394. The game binary has changed; revalidate before installing.' }
 $detectedGameBuild=$supportedBuild[0].build
 $expectedUnityHash=$supportedBuild[0].unityPlayerSha256
 if(-not $expectedUnityHash) { $expectedUnityHash=$releaseManifest.unityPlayerSha256 }
@@ -142,7 +142,7 @@ try {
     }
     $manifest = [pscustomobject]@{version=$releaseManifest.version;gameBuild=$detectedGameBuild;pluginFiles=$pluginFiles;loaderFiles=$loaderFiles}
     $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
-    Write-Host 'NightShift 0.5.7 installed. F11: frame generation Off/2x/3x/4x. F5: DLAA on/off. F7: show/hide menu.'
+    Write-Host 'NightShift 0.5.8 installed. F11: frame generation Off/2x/3x/4x. F5: DLAA on/off. F7: show/hide menu.'
     Write-Host 'DLAA starts ON in gameplay; frame generation starts OFF. Launch normally through Steam. DLSS upscaling is coming soon.'
 } catch {
     # Roll back explicit owned updates as well as newly copied files.
